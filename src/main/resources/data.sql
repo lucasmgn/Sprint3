@@ -1,0 +1,2 @@
+INSERT INTO STATES(nome, regiao, populacao, capital, area) VALUES ('Bahia', 'NORDESTE', 3409000, 'Salvador',52797);
+INSERT INTO STATES(nome, regiao, populacao, capital, area) VALUES ('Sergipe', 'NORDESTE', 309000, 'Aracaju',30797);

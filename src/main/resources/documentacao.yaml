@@ -1,0 +1,183 @@
+openapi: 3.0.3
+info:
+  title: API States
+  description: "Devido a rápida expansão da Compass.UOL, surgiu a necessidade de monitorar cada região do país que ela se encontra, com isso foi criada API States para fazer gerenciamento dos estados das regiões: Norte, Nordeste, Sul, Sudeste e Centro-Oeste."
+
+  version: 0.0.1
+  contact:
+    name: Suporte Dev
+    email: lucas.peixoto.pb@compasso.com.br
+  license: 
+    name: "Lincença: GPLv3"
+    url: https://www.gnu.org/licenses/gpl-3.0.html
+servers:
+- url: http://localhost:8080
+  description: API States
+paths:
+  /api/states:
+    get:
+      tags:
+        - States
+      summary: Lista todos os States
+      description: "Através desse endpoint você poderá listar os States. Existe filtros para o retorno da requisição, utilizando os Params Key = sort | Value = {nome da propriedade para a ordenação (area ou populacao) } , {tipo de ordenação}. Ex: Key = sort | Value = area,desc. Existe também uma lógica de paginação Ex: Key = page | Value = 0 e Key = size | Value = 3. E por fim um filtro de states por região, que irá buscar os states referente a região filtrada. Ex: Key = regiao | Value = NORDESTE   (o value precisa ser entregue nesse formato, pois é um enum)."
+      responses:
+        200:
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StatesId"
+        5XX:
+            description: "Erro no servidor, tente mais tarde!"
+                  
+    post:
+      summary: Cria um novo State
+      description: "Através desse endpoint você poderá criar novos States. Se algum campo obrigatório for violado, retornará 400 com uma mensagem informando o campo e o erro"
+      tags:
+        - States
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/State"
+      responses:
+        201:
+          description: "Sucesso"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StateId"
+        400:
+          description: State já existe ou você violou um campo
+          content: 
+            application/json:
+                schema:
+                  $ref: "#/components/schemas/RespostaBadRequest"
+                
+  /api/states/{id}:
+      parameters:
+      - name: id
+        in: path
+        schema:
+          type: integer
+        required: true
+      get:
+        summary: Lista os States por id
+        description: "Através desse endpoint você poderá consultar States por id. Se não existir, retornará 404."
+        tags:
+          - States
+        responses:
+          200:
+            description: Sucesso
+            content:
+              application/json:
+                schema: 
+                  $ref: "#/components/schemas/StateId"
+          404:
+            description: State não encontrado
+            content: 
+              application/json:
+                example: "Not Found"
+          5XX:
+            description: "Erro no servidor, tente mais tarde!"      
+      put:
+        summary: Autualiza State por id
+        description: "Através desse endpoint você poderá atualizar um State. Se algum campo obrigatório for violado, retornará 400 com uma mensagem informando o campo e o erro, se o ID infromado não existir, retornará 404."
+        tags:
+          - States
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/State"
+        responses: 
+          200:
+            description: "Sucesso, state atualizada"
+            content:
+              application/json:
+                schema: 
+                    $ref: "#/components/schemas/StateId"
+          404:
+            description: State não encontrado
+            content:
+              application/json:
+                example: "Not Found"
+          400:
+            description: "Bad Request"
+            content: 
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/RespostaBadRequest"
+      delete: 
+        summary: Exclui State por id
+        description: "Através desse endpoint você poderá excluir um State. Se o ID infromado não existir, retornará 404."
+        tags:
+          - States
+        responses: 
+          204:
+            description: "Sucesso"
+          404:
+            description: State não encontrado!
+            content:
+              application/json:
+                example: "Not Found"
+components:
+  schemas:
+    State:
+      type: object
+      properties:
+        nome:
+          type: string
+        regiao: 
+          type: string
+          enum:
+            - Sul
+            - Sudeste
+            - Norte
+            - Nordeste
+            - Centro-Oeste
+        populacao:
+          type: number
+        capital:
+          type: string
+        area:
+          type: number
+    StateId:
+      type: object
+      properties:
+        id:
+          type: integer
+        nome:
+          type: string
+        regiao: 
+          type: string
+          enum:
+            - Sul
+            - Sudeste
+            - Norte
+            - Nordeste
+            - Centro-Oeste
+        populacao:
+          type: number
+        capital:
+          type: string
+        area:
+          type: number
+    StatesId:
+      type: array
+      items: 
+        $ref: "#/components/schemas/StateId"
+        
+    RespostaBadRequest:  
+       type: object
+       properties:
+          campo:
+            type: string
+          erro: 
+            type: string
+      
+      
+      
+      
+      
+      
