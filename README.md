@@ -44,3 +44,18 @@
 
 ![Captura de Tela (99)](https://user-images.githubusercontent.com/81782608/201474205-64865255-1680-428d-b199-aa965cf5c07a.png)
 
+<h3>Postman.</h3>
+
+<h4>Listar</h4>
+
+![Captura de Tela (100)](https://user-images.githubusercontent.com/81782608/201474389-617184c5-c218-4396-b9c6-3b279183e527.png)
+
+<h4>Cadastrar</h4>
+
+![Captura de Tela (101)](https://user-images.githubusercontent.com/81782608/201474414-5e7d6625-6719-48b9-ac9c-b9356f11c5a1.png)
+
+<h4>Atualizar</h4>
+
+![Captura de Tela (102)](https://user-images.githubusercontent.com/81782608/201474420-f956a12d-17ae-415f-a840-20840983b467.png)
+
+
