@@ -6,6 +6,8 @@ Na pasta resources, estão os arquivos, do swagger(documentacao.yaml), applicati
 
 <p>Assim que a aplicação rodar, será feito o insert de dois estados Bahia e Sergipe
 
+<p>Eu habilitei o cors do Spring, para poder fazer testes da requisição via Swagger
+
 <p>A aplicação tem um crud, localizado na pasta controller, tem uma classe chamada StaterController, ela possui 5 métodos, são eles:
 <ul>
   <li><strong>listarStates</strong>, que faz filtragem por região, maior população ou área, e também faz paginação</li>
