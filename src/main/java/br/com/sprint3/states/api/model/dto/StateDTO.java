@@ -16,7 +16,7 @@ public class StateDTO {
 
     private String capital;
 
-    private Long area;
+    private Double area;
 
     public StateDTO(State state){
         this.id = state.getId();
@@ -71,11 +71,11 @@ public class StateDTO {
         this.capital = capital;
     }
 
-    public Long getArea() {
+    public Double getArea() {
         return area;
     }
 
-    public void setArea(Long area) {
+    public void setArea(Double area) {
         this.area = area;
     }
 }

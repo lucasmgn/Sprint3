@@ -17,7 +17,7 @@ public class StateForm {
     @NotBlank
     private String capital;
     @NotNull
-    private Long area;
+    private Double area;
 
     public State converterForm() {
         return new State(nome, regiao, populacao, capital, area);
@@ -55,11 +55,11 @@ public class StateForm {
         this.capital = capital;
     }
 
-    public Long getArea() {
+    public Double getArea() {
         return area;
     }
 
-    public void setArea(Long area) {
+    public void setArea(Double area) {
         this.area = area;
     }
 }
