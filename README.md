@@ -4,9 +4,8 @@
 <p>Api foi desenvolvida seguindo o modelo de arquitetura MVC.
 Na pasta resources, estão os arquivos, do swagger(documentacao.yaml), application.properties e o dta.sql
 
-<p>Assim que a aplicação rodar, será feito o insert de dois estados Bahia e Sergipe
-
 <p>Eu habilitei o cors do Spring, para poder fazer testes da requisição via Swagger
+<p>Assim que a aplicação rodar, será feito o insert de dois estados Bahia e Sergipe
 
 <p>A aplicação tem um crud, localizado na pasta controller, tem uma classe chamada StaterController, ela possui 5 métodos, são eles:
 <ul>
