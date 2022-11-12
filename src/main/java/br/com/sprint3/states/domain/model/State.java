@@ -26,12 +26,12 @@ public class State {
     private String capital;
     @Column(nullable = false)
     @PositiveOrZero
-    private Long area;
+    private Double area;
 
     public State() {
     }
 
-    public State(String nome, Regiao regiao, Long populacao, String capital, Long area) {
+    public State(String nome, Regiao regiao, Long populacao, String capital, Double area) {
         this.nome = nome;
         this.regiao = regiao;
         this.populacao = populacao;
@@ -75,11 +75,11 @@ public class State {
         this.capital = capital;
     }
 
-    public Long getArea() {
+    public Double getArea() {
         return area;
     }
 
-    public void setArea(Long area) {
+    public void setArea(Double area) {
         this.area = area;
     }
 

@@ -19,7 +19,7 @@ public class StateAtualizacaoForm {
     @NotBlank
     private String capital;
     @NotNull
-    private Long area;
+    private Double area;
 
     public Long getPopulacao() {
         return populacao;
@@ -29,11 +29,11 @@ public class StateAtualizacaoForm {
         this.populacao = populacao;
     }
 
-    public Long getArea() {
+    public Double getArea() {
         return area;
     }
 
-    public void setArea(Long area) {
+    public void setArea(Double area) {
         this.area = area;
     }
 
