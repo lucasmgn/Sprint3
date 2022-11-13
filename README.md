@@ -7,8 +7,11 @@
 
 ![Captura de Tela (92)](https://user-images.githubusercontent.com/81782608/201473598-514cc6eb-78b4-4e47-be40-366ee744f63a.png)
 
-![Captura de Tela (96)](https://user-images.githubusercontent.com/81782608/201473915-52fea397-08e7-4c2c-b444-e92df76c9a8a.png)
+![Captura de Tela (104)](https://user-images.githubusercontent.com/81782608/201504908-ffb09db1-bd6d-4486-abe5-db0b225e2acb.png)
 
+<h3>Foi criada a classe <strong>StringEnumConverte</strong> para converter os valores do params para Enum e assim fazer o filtro por região</h3>
+
+![Captura de Tela (105)](https://user-images.githubusercontent.com/81782608/201504970-f212d89d-5027-44c2-98a7-840702568ea9.png)
 
 <h3>Assim que a aplicação rodar, será feito o insert de dois estados Bahia e Sergipe</h3>
 
