@@ -32,7 +32,7 @@ public class StateController {
 
     //Ordenacao, maior população ou area
     @GetMapping
-    public Page<StateDTO> listarStates(@RequestParam(required = false) Regiao regiao, Pageable pageable){
+    public Page<StateDTO> listarStates(@RequestParam(required = false, name = "regiao") Regiao regiao, Pageable pageable){
         if(regiao == null){
             Page<State> states = stateRepository.findAll(pageable);
             return StateDTO.converter(states);
