@@ -19,7 +19,7 @@ paths:
       tags:
         - States
       summary: Lista todos os States
-      description: "Através desse endpoint você poderá listar os States. Existe filtros para o retorno da requisição, utilizando os Params Key = sort | Value = {nome da propriedade para a ordenação (area ou populacao) } , {tipo de ordenação}. Ex: Key = sort | Value = area,desc. Existe também uma lógica de paginação Ex: Key = page | Value = 0 e Key = size | Value = 3. E por fim um filtro de states por região, que irá buscar os states referente a região filtrada. Ex: Key = regiao | Value = NORDESTE   (o value precisa ser entregue nesse formato, pois é um enum)."
+      description: "Através desse endpoint você poderá listar os States. Existe filtros para o retorno da requisição, utilizando os Params. Ex: Filtrar por região - 'http://localhost:8080/api/states?regiao=nordeste' (o valor da região mesmo sendo um enum, pode ser colocado com letras minusculas). Ex: Ordenar por maior area - 'http://localhost:8080/api/states?sort=area,desc' (mudando desc para asc, ordena por menor area). Ex: Ordenar por maior populaçao - 'http://localhost:8080/api/states?sort=populacao,desc'.  Também existe uma lógica de páginação Ex: Paginação - http://localhost:8080/api/states?size=1&page=0"
       responses:
         200:
           description: Sucesso
