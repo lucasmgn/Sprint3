@@ -15,7 +15,8 @@
 
 <h3>Houve a necessidade de validar o filtro por Região, então criei uma classe handler que capturaria possiveis erros e retornasse um badRequest</h3>
 
-![Captura de Tela (107)](https://user-images.githubusercontent.com/81782608/201563567-61710924-57b9-4d71-8a72-90123d67ffdb.png)
+![Captura de Tela (109)](https://user-images.githubusercontent.com/81782608/201695312-602a3360-79b3-4c97-a58a-732bd73f477e.png)
+
 
 <h3>Assim que a aplicação rodar, será feito o insert de dois estados Bahia e Sergipe</h3>
 
