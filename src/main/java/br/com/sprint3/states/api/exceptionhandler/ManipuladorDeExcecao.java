@@ -11,7 +11,7 @@ public class ManipuladorDeExcecao {
 
     @ExceptionHandler(ConversionFailedException.class)
     public ResponseEntity<String> handleConflict() {
-        return new ResponseEntity<>(String.format("Value do Params inválido!"),HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(String.format("Parâmetro inválido!"),HttpStatus.BAD_REQUEST);
     }
 
 }

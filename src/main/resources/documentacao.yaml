@@ -29,10 +29,10 @@ paths:
                 $ref: "#/components/schemas/StatesId"
         
         400:
-          description: Value do Params inválido!
+          description: Parâmetro inválido!
           content: 
             application/json:
-                    example: "Value do Params inválido!"
+                    example: "Parâmetro inválido!"
                       
         5XX:
             description: "Erro no servidor, tente mais tarde!"
