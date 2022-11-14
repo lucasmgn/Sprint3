@@ -11,7 +11,11 @@
 
 <h3>Foi criada a classe <strong>StringEnumConverte</strong> para converter os valores do params para Enum e assim fazer o filtro por região</h3>
 
-![Captura de Tela (105)](https://user-images.githubusercontent.com/81782608/201504970-f212d89d-5027-44c2-98a7-840702568ea9.png)
+![Captura de Tela (106)](https://user-images.githubusercontent.com/81782608/201563351-fa322b8d-7904-474b-886d-0942eb37ed08.png)
+
+<h3>Houve a necessidade de validar o filtro por Região, então criei uma classe handler que capturaria possiveis erros e retornasse um badRequest</h3>
+
+![Captura de Tela (107)](https://user-images.githubusercontent.com/81782608/201563567-61710924-57b9-4d71-8a72-90123d67ffdb.png)
 
 <h3>Assim que a aplicação rodar, será feito o insert de dois estados Bahia e Sergipe</h3>
 
