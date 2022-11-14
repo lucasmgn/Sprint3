@@ -27,6 +27,13 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/StatesId"
+        
+        400:
+          description: Value do Params inválido!
+          content: 
+            application/json:
+                    example: "Value do Params inválido!"
+                      
         5XX:
             description: "Erro no servidor, tente mais tarde!"
                   
@@ -128,41 +135,50 @@ components:
       properties:
         nome:
           type: string
+          example: Bahia
         regiao: 
           type: string
           enum:
-            - Sul
+            - Nordeste
             - Sudeste
             - Norte
-            - Nordeste
+            - Sul
             - Centro-Oeste
         populacao:
           type: number
+          example: 3409000
         capital:
           type: string
+          example: Salvador
         area:
           type: number
+          example: 52.797
     StateId:
       type: object
       properties:
         id:
           type: integer
+          example: 1
         nome:
           type: string
+          example: Bahia
         regiao: 
           type: string
           enum:
-            - Sul
+            - Nordeste
             - Sudeste
             - Norte
-            - Nordeste
+            - Sul
             - Centro-Oeste
         populacao:
           type: number
+          example: 3409000
         capital:
           type: string
+          example: Salvador
         area:
           type: number
+          example: 52.797
     StatesId:
       type: array
       items: 
@@ -173,8 +189,10 @@ components:
        properties:
           campo:
             type: string
+            example: nome
           erro: 
             type: string
+            example: não deve estar em branco
       
       
       
